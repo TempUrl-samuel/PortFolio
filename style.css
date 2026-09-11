@@ -6,20 +6,45 @@
 }
 
 .dark-mode {
-    background-color: rgba(35, 12, 40, 1);
+    background-color: rgba(75, 29, 68, 1);
     color: white;
+
+    section {
+        background-color: rgba(35, 12, 41, 1);
+    }
+
+    #horizontal-header-wdark-mode ul {
+        background-color: rgba(35, 12, 41, 1);
+    }
+
+    h1 {
+        background-color: rgba(147, 79, 94, 1);
+    }
+    #botao-tema{
+    background-color:rgba(147, 79, 94, 1);
+    }
+    
 }
 
 body {
     padding: 25px;
-    background-color: white;
+    background-color: rgba(26, 117, 159, 1);
     color: black;
     font-size: 25px;
     font-family: "Comic Neue", cursive;
 }
 
-/*Body----------*/
-#horizontal-hedaer-wdark-mode ul {
+section {
+    background-color: rgba(30, 96, 145, 1);
+}
+
+h1 {
+    text-align: center;
+    background-color: rgba(178, 201, 171, 1);
+}
+
+/*Body->header---------*/
+#horizontal-header-wdark-mode ul {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -27,7 +52,7 @@ body {
     border-radius: 0px 50px 50px 0px;
 }
 
-#horizontal-hedaer-wdark-mode li {
+#horizontal-header-wdark-mode li {
     list-style: none;
     margin-left: 5%;
 }
@@ -49,4 +74,19 @@ body {
     align-items: center;
     border-radius: 100%;
     background-color: rgba(35, 12, 40, 1);
+}
+
+/*Body->About Me---------*/
+
+#AboutMe {
+    padding-left: 5%;
+}
+
+#AboutMe>h1 {
+    background-color: rgba(188, 138, 95, 1);
+}
+
+#AboutMe>p {
+    width: 80%;
+    background-color: rgba(188, 138, 95, 1);
 }

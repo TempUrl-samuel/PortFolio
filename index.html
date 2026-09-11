@@ -9,8 +9,8 @@
 </head>
 
 <body>
-
-    <header id="horizontal-hedaer-wdark-mode">
+    <script src="script.js" defer></script>
+    <header id="horizontal-header-wdark-mode">
         <ul>
             <li id="btn-dark">Dark Mode <button onclick="tema()" id="botao-tema"> </button></li>
             <li>About Me</li>
@@ -20,7 +20,7 @@
         </ul>
     </header>
     <section id="AboutMe">
-        <h1>Samuel <br>Caetano</h1>
+        <h2>Samuel <br>Caetano</h2>
         <br>
         <p>Hello, I’m Samuel, a 16 year old teenager who has been studying in Cotemig as of 2026, and my main focus is
             to help with any type of front end problems, where as html, css or javascript, I’ll always be in charge.
@@ -29,6 +29,7 @@
         </p>
         <div id="foto-de-perfil"><img src="" alt="Minha Foto De Perfil"></div>
     </section>
+
     <section id="Skills">
         <h1>Minha Skills</h1>
         <ul>
@@ -40,20 +41,52 @@
     <section id="Projects">
         <h1>My Projects</h1>
         <br>
-        <div id="Scoundrel-Crawl"></div>
-        <div id="Blog"></div>
+        <div id="Scoundrel-Crawl">Scoundrel Crawl</div>
+        <div id="Blog">Blog</div>
     </section>
-    <section id="Experiencias Socials">
+    <section id="Experiencias">
         <ul>
             <li>
                 <div></div>
-                <p>I travelled to Portugal to understand more of my dad’s job, the customer management part of the company.</p>
+                <p>I travelled to Portugal to understand more of my dad’s job, the customer management part of the
+                    company.</p>
             </li>
-            <li><div></div> <p>I have been to Minas Summit, a place where companies reunite into one place to show their innovations, startups and businesses.</p></li>
-            <li></li>
+            <li>
+                <div></div>
+                <p>I have been to Minas Summit, a place where companies reunite into one place to show their
+                    innovations, startups and businesses.</p>
+            </li>
+            <li>
+                <div></div>
+                <p>I went to Glass South America in Sao Paulo, with the intent of understanding better the business
+                    marketing and architecture design. </p>
+            </li>
         </ul>
     </section>
-    <script src="script.js"></script>
+    <section id="Socials">
+        <h1>My Socials</h1>
+        <div id="Youtube/Instagram">
+            <ul>
+                <li>Youitube</li>
+                <li>Instagram</li>
+            </ul>
+        </div>
+        <div id="Reddit/Neocities">
+            <ul>
+                <li>Reddit</li>
+                <li>Neocities</li>
+            </ul>
+        </div>
+    </section>
+    <section id="Contact">
+        <h1>Contact</h1>
+        <form action="https://formsubmit.co/your@email.com" method="POST">
+            <input type="text" name="name" required>
+            <input type="email" name="email" required>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <footer></footer>
 </body>
 
 </html>

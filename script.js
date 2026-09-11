@@ -1,4 +1,4 @@
-function tema(){
+function tema() {
     let tema = document.body
     tema.classList.toggle("dark-mode")
     let bgBtn = document.body.getElementsById("botao-tema")
