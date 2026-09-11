@@ -32,6 +32,7 @@ body {
     color: black;
     font-size: 25px;
     font-family: "Comic Neue", cursive;
+    transition: 77ms;
 }
 
 section {
@@ -61,7 +62,7 @@ h1 {
     color: var(--texto-btn);
     background-color: var(--btn-bg);
     border-style: none;
-    padding: 3vh;
+    padding: 1.5vh;
     width: auto;
     font-size: large;
     border-radius: 0px 50px 50px 0px;
@@ -80,13 +81,24 @@ h1 {
 
 #AboutMe {
     padding-left: 5%;
+
 }
 
-#AboutMe>h1 {
+#AboutMe>div h2 {
     background-color: rgba(188, 138, 95, 1);
+    font-size: 100px;
+    width: 70%;
+    border-radius: 0px 150px 0px 0px;
+    
 }
 
-#AboutMe>p {
+#AboutMe>div p {
     width: 80%;
     background-color: rgba(188, 138, 95, 1);
+    padding: 5%;
+    border-radius: 0px 150px 150px 0px;
+}
+
+#AboutMe{
+
 }
