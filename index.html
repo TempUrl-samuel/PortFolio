@@ -89,9 +89,24 @@
     <section id="Contact">
         <h1>Contact</h1>
         <form action="https://formsubmit.co/your@email.com" method="POST">
-            <input type="text" name="name" required>
-            <input type="email" name="email" required>
-            <button type="submit">Send</button>
+            <input class="caixa" type="text" name="name" required>
+            <input class="caixa" type="email" name="email" required>
+            <!--<input type="text" id="telefone" class="campo-telefone" placeholder="(00) 00000-0000" maxlength="15">-->
+            <input class="caixa" type="email" placeholder="Enter Your [[EMAIL IN REBATE]]">
+            <input class="caixa" type="password" placeholder="Enter Your [[SECRET CODE]]">
+            <div class="genero">
+                <button class="caixa" class="toggle-genero" type="button" id="butao-genero" data-toggle="dropdown">
+                    Enter Your [[GENDER EQUALITY]]
+                </button>
+                <div class="dropdown-genero">
+                    <ul>
+                        <li><button class="dropdown-item" type="button">MASCULINE</button></li>
+                        <li><button class="dropdown-item" type="button">FEMININE</button></li>
+                        <li><button class="dropdown-item" type="button">PREFER NOT TO SAY</button></li>
+                    </ul>
+                </div>
+            </div>
+            <button id="send" type="submit">Send</button>
         </form>
     </section>
     <footer></footer>

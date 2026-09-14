@@ -12,7 +12,7 @@
     color: white;
 
     section:hover {
-        background: rgba(35, 12, 41, 0.5);
+        background-color: rgba(35, 12, 41, 0.5);
         transition: background-color 0.5s ease;
     }
 
@@ -31,7 +31,6 @@
 }
 
 body {
-    padding: 25px;
     background-color: var(--background-light);
     color: black;
     font-size: 25px;
@@ -45,7 +44,7 @@ section {
 }
 
 section:hover {
-    background: rgba(19, 56, 86, 0.703);
+    background-color: rgba(19, 56, 86, 0.703);
     transition: background-color 0.5s ease;
 }
 
@@ -161,3 +160,39 @@ footer {
     background-color: rgba(178, 201, 171, 1);
     height: 23vh;
 }
+
+
+/*Body->Contact----------------------*/
+
+.Contact {
+    display: flex;
+    flex-direction: row;
+}
+
+.caixa {
+    width: 22vh;
+    height: 3vh;
+    background-color: aqua;
+}
+
+#send {
+    width: 6vh;
+    height: 3vh;
+}
+
+.genero {}
+
+.dropdown-genero>ul li {
+    display: flex;
+    flex-direction: column;
+    width: 6vw;
+}
+
+.dropdown-item {
+    background-color: var(--background-light);
+    border: ;
+}
+
+.toggle-genero {}
+
+#butao-genero {}
