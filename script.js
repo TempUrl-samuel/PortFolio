@@ -42,7 +42,20 @@ function gmailRepair() {
     }
 }
 
+function cep() {
+    var cepCorreto = document.getElementById("CEP").value
+    if (cepCorreto[2] != ".") {
+        if (cepCorreto[2] != undefined) {
+            document.getElementById("cep").value = cepCorreto.slice(0, 2) + "." + cep_formatado[2];
+        }
+    }
+    if (cepCorreto[6] != "-") {
+        if (cepCorreto[6] != undefined) {
+            document.getElementById("cep").value = cepCorreto.slice(0, 6) + "-" + cep_formatado[6]
+        }
+    }
 
+}
 
 
 
