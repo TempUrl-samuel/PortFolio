@@ -3,14 +3,17 @@
 :root {
     --btn-bg: hsl(47, 53%, 81%);
     --texto-btn: rgb(52, 79, 103);
+    --background-light: rgba(26, 117, 159, 1);
+    --background-dark: rgba(75, 29, 68, 1);
 }
 
 .dark-mode {
-    background-color: rgba(75, 29, 68, 1);
+    background-color: var(--background-dark);
     color: white;
 
-    section {
-        background-color: rgba(35, 12, 41, 1);
+    section:hover {
+        background: rgba(35, 12, 41, 0.5);
+        transition: background-color 0.5s ease;
     }
 
     #horizontal-header-wdark-mode ul {
@@ -29,7 +32,7 @@
 
 body {
     padding: 25px;
-    background-color: rgba(26, 117, 159, 1);
+    background-color: var(--background-light);
     color: black;
     font-size: 25px;
     font-family: "Comic Neue", cursive;
@@ -37,13 +40,20 @@ body {
 }
 
 section {
-    background-color: rgba(30, 96, 145, 1);
+    border-radius: 50px;
+    padding: 2%;
 }
+
+section:hover {
+    background: rgba(19, 56, 86, 0.703);
+    transition: background-color 0.5s ease;
+}
+
 
 h1 {
     text-align: center;
     background-color: rgba(178, 201, 171, 1);
-    border-radius: 50px  50px 50px 50px;
+    border-radius: 50px 50px 50px 50px;
     width: 33%;
     margin-left: 33%;
 }
@@ -114,3 +124,40 @@ h1 {
     justify-content: space-evenly;
 }
 
+/*Body->My Projects----------------------*/
+
+#Projects>ul li {
+    display: flex;
+    justify-content: center;
+}
+
+/*Body->My Experiences----------------------*/
+
+#Experiencias>ul li {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    align-items: center;
+    margin: 5% 0% 0% 5%;
+}
+
+/*Body->My Socials----------------------*/
+
+#Socials>div ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+#Socials li {
+    list-style: none;
+}
+
+
+
+footer {
+    background-color: rgba(178, 201, 171, 1);
+    height: 23vh;
+}
