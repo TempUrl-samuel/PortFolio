@@ -3,23 +3,50 @@ function tema() {
     tema.classList.toggle("dark-mode")
 }
 
+function phonehelper() {
+    var tel = document.getElementById("telefone").value
+    tel = tel.slice(0, 14)
+    document.getElementById("telefone").value = tel
+    tel = document.getElementById("telefone").value.slice(0, 10)
 
-/*Telefone*/
-// const inputTelefone = document.getElementById('telefone');
-// inputTelefone.addEventListener('input', (evento) => {
-//     let valor = evento.target.value;
-//     valor = valor.replace(/\D/g, "");
-//     if (valor.length > 0) {
-//         valor = "(" + valor;
-//     }
-//     if (valor.length > 3) {
-//         valor = valor.slice(0, 3) + ") " + valor.slice(3);
-//     }
-//     if (valor.length > 10) {
+    var phonemated = document.getElementById("telefone").value
 
-//         valor = valor.slice(0, 10) + "-" + valor.slice(10, 14);
-//     } else if (valor.length > 6) {
-//         valor = valor.slice(0, 9) + "-" + valor.slice(9);
-//     }
-//     evento.target.value = valor;
-// });/ 
+    if (phonemated[0] != "(") {
+        if (phonemated[0] != undefined) {
+            document.getElementById("telefone").value = "(" + phonemated[0];
+        }
+    }
+
+    if (phonemated[3] != ")") {
+        if (phonemated[3] != undefined) {
+            document.getElementById("telefone").value = phonemated.slice(0, 3) + ")" + phonemated[3]
+        }
+    }
+
+    if (phonemated[9] != "-") {
+        if (phonemated[9] != undefined) {
+            document.getElementById("telefone").value = phonemated.slice(0, 9) + "-" + phonemated[9]
+        }
+    }
+}
+
+function gmailRepair() {
+    var gmail = document.getElementById("endereco").value
+    document.getElementById("endereco").value = gmail
+    var googol = document.getElementById("endereco").value
+
+    if (googol != "@") {
+        if (googol != undefined) {
+            document.getElementById("endereco").value = "@" + googol;
+        }
+    }
+}
+
+
+
+
+
+
+function parabens() {
+    alert("Parabens, tudo foi preencido perfeitamente")
+}

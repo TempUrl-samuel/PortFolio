@@ -166,7 +166,7 @@ footer {
 
 .Contact {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .caixa {
@@ -179,7 +179,7 @@ footer {
     width: 6vh;
     height: 3vh;
 }
-
+/* 
 .genero {}
 
 .dropdown-genero>ul li {
@@ -190,9 +190,8 @@ footer {
 
 .dropdown-item {
     background-color: var(--background-light);
-    border: ;
 }
 
 .toggle-genero {}
 
-#butao-genero {}
+#butao-genero {} */

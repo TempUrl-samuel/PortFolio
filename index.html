@@ -88,11 +88,16 @@
     </section>
     <section id="Contact">
         <h1>Contact</h1>
-        <form action="https://formsubmit.co/your@email.com" method="POST">
-            <input class="caixa" type="text" name="name" required>
-            <input class="caixa" type="email" name="email" required>
-            <!--<input type="text" id="telefone" class="campo-telefone" placeholder="(00) 00000-0000" maxlength="15">-->
-            <input class="caixa" type="email" placeholder="Enter Your [[EMAIL IN REBATE]]">
+
+        <form action="">
+            <input class="caixa" type="text" name="" id="">
+            <input class="caixa" type="tel" id="telefone" placeholder="(00) 00000-0000" maxlength="15" oninput="phonehelper()">
+            <input class="caixa" type="email" id="endereco" placeholder="example@gmail.com" oninput="gmailRepair()">
+           
+           
+            <button id="send" type="submit" onclick="parabens()">Send</button>
+        </form>
+
             <input class="caixa" type="password" placeholder="Enter Your [[SECRET CODE]]">
             <div class="genero">
                 <button class="caixa" class="toggle-genero" type="button" id="butao-genero" data-toggle="dropdown">
@@ -106,8 +111,6 @@
                     </ul>
                 </div>
             </div>
-            <button id="send" type="submit">Send</button>
-        </form>
     </section>
     <footer></footer>
 </body>
