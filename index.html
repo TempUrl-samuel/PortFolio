@@ -93,14 +93,10 @@
             <input class="caixa" type="text" name="" id="">
             <input class="caixa" type="tel" id="telefone" placeholder="(00) 00000-0000" maxlength="15"
                 oninput="phonehelper()">
-            <input class="caixa" type="email" id="endereco" placeholder="example@gmail.com" oninput="gmailRepair()">
+            <input class="caixa" type="email" id="endereco" placeholder="example@gmail.com" >
             <input class="caixa" type="password" placeholder="Password">
-            <input type="text" placeholder="CEP" class="caixa" id="CEP" oninput="cep()" maxlength="10">
-            <button id="send" type="submit" onclick="parabens()">Send</button>
-        </form>
-
-
-        <div class="genero">
+            <input type="text" placeholder="CEP" class="caixa" id="CEP" oninput="cep()" maxlength="9">
+            <input class="caixa" type="number" id="cpf" placeholder="000.000.000.00" maxlength="13" oninput="cepeefe()">
             <button class="caixa" class="toggle-genero" type="button" id="butao-genero" data-toggle="dropdown">
                 Enter Your [[GENDER EQUALITY]]
             </button>
@@ -111,9 +107,17 @@
                     <li><button class="dropdown-item" type="button">PREFER NOT TO SAY</button></li>
                 </ul>
             </div>
+            <button id="send" type="submit" onclick="parabens()">Send</button>
+        </form>
+
+
+        <div class="genero">
+
         </div>
     </section>
-    <footer></footer>
+    <footer>
+        <p></p>
+    </footer>
 </body>
 
 </html>

@@ -30,34 +30,43 @@ function phonehelper() {
     }
 }
 
-function gmailRepair() {
-    var gmail = document.getElementById("endereco").value
-    document.getElementById("endereco").value = gmail
-    var googol = document.getElementById("endereco").value
-
-    if (googol != "@") {
-        if (googol != undefined) {
-            document.getElementById("endereco").value = "@" + googol;
-        }
-    }
-}
-
 function cep() {
     var cepCorreto = document.getElementById("CEP").value
+    document.getElementById("CEP").value = cepCorreto
+    tel = tel.slice(0, 14)
     if (cepCorreto[2] != ".") {
         if (cepCorreto[2] != undefined) {
-            document.getElementById("cep").value = cepCorreto.slice(0, 2) + "." + cep_formatado[2];
+            document.getElementById("CEP").value = cepCorreto.slice(0, 2) + "." + cepCorreto[2]
         }
     }
     if (cepCorreto[6] != "-") {
         if (cepCorreto[6] != undefined) {
-            document.getElementById("cep").value = cepCorreto.slice(0, 6) + "-" + cep_formatado[6]
+            document.getElementById("CEP").value = cepCorreto.slice(0, 2) + "-" + cepCorreto[2]
         }
     }
 
 }
 
+function cepeefe() {
+    var CPF = document.getElementById("cpf").value
+    document.getElementById("cpf").value = CPF
 
+    if (CPF[3] != ".") {
+        if (CPF[3] != undefined) {
+            document.getElementById("cpf").value = CPF.slice(0, 3) + "." + CPF[3]
+        }
+    }
+    if (CPF[7] != ".") {
+        if (CPF[7] != undefined) {
+            document.getElementById("cpf").value = CPF.slice(0, 7) + "." + CPF[7]
+        }
+    }
+    if (CPF[11] != "-") {
+        if (CPF[11] != undefined) {
+            document.getElementById("cpf").value = CPF.slice(0, 11) + "-" + CPF[11]
+        }
+    }
+}
 
 
 function parabens() {
