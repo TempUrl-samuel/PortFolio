@@ -33,7 +33,6 @@ function phonehelper() {
 function cep() {
     var cepCorreto = document.getElementById("CEP").value
     document.getElementById("CEP").value = cepCorreto
-    tel = tel.slice(0, 14)
     if (cepCorreto[2] != ".") {
         if (cepCorreto[2] != undefined) {
             document.getElementById("CEP").value = cepCorreto.slice(0, 2) + "." + cepCorreto[2]
@@ -41,7 +40,7 @@ function cep() {
     }
     if (cepCorreto[6] != "-") {
         if (cepCorreto[6] != undefined) {
-            document.getElementById("CEP").value = cepCorreto.slice(0, 2) + "-" + cepCorreto[2]
+            document.getElementById("CEP").value = cepCorreto.slice(0, 6) + "-" + cepCorreto[6]
         }
     }
 
@@ -68,6 +67,32 @@ function cepeefe() {
     }
 }
 
+function ceenipejota() {
+    var cnpj = document.getElementById("cnpj").value
+    document.getElementById("cnpj").value = cnpj
+
+    if (CPF[2] != ".") {
+        if (CPF[2] != undefined) {
+            document.getElementById("cpf").value = CPF.slice(0, 2) + "." + CPF[2]
+        }
+    }
+    if (CPF[6] != ".") {
+        if (CPF[6] != undefined) {
+            document.getElementById("cpf").value = CPF.slice(0, 6) + "." + CPF[6]
+        }
+    }
+    if (CPF[10] != "-") {
+        if (CPF[10] != undefined) {
+            document.getElementById("cpf").value = CPF.slice(0, 10) + "-" + CPF[10]
+        }
+    }
+    
+    if (CPF[10] != "-") {
+        if (CPF[10] != undefined) {
+            document.getElementById("cpf").value = CPF.slice(0, 10) + "-" + CPF[10]
+        }
+    }
+}
 
 function parabens() {
     alert("Parabens, tudo foi preencido perfeitamente")
