@@ -3,6 +3,8 @@
 :root {
     --btn-bg: hsl(47, 53%, 81%);
     --texto-btn: rgb(52, 79, 103);
+    --texto-dark: white;
+    --texto-normal: black;
     --background-light: rgba(26, 117, 159, 1);
     --background-dark: rgba(75, 29, 68, 1);
 }
@@ -26,6 +28,16 @@
 
     #botao-tema {
         background-color: rgba(147, 79, 94, 1);
+    }
+
+    .caixa {
+        background-color: var(--background-dark);
+        color: var(--texto-dark);
+    }
+
+    #send {
+        background-color: var(--background-dark);
+        color: var(--texto-dark);
     }
 
 }
@@ -154,14 +166,6 @@ h1 {
     list-style: none;
 }
 
-
-
-footer {
-    background-color: rgba(178, 201, 171, 1);
-    height: 23vh;
-}
-
-
 /*Body->Contact----------------------*/
 
 .Contact {
@@ -170,28 +174,84 @@ footer {
 }
 
 .caixa {
-    width: 22vh;
-    height: 3vh;
-    background-color: aqua;
-}
-
-#send {
-    width: 6vh;
-    height: 3vh;
-}
-/* 
-.genero {}
-
-.dropdown-genero>ul li {
-    display: flex;
-    flex-direction: column;
-    width: 6vw;
-}
-
-.dropdown-item {
+    width: 22vw;
+    height: 3vw;
     background-color: var(--background-light);
 }
 
-.toggle-genero {}
+#btn-send {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transition: 0.25s;
+    -webkit-transition: 0.25s;
+}
 
-#butao-genero {} */
+#send {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 17pt;
+    text-transform: uppercase;
+}
+
+#send span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 5px solid var(--background-light);
+    line-height: 50px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+figure {
+    width: 200px;
+    height: 60px;
+    cursor: pointer;
+    perspective: 500px;
+    -webkit-perspective: 500px;
+}
+
+figure div {
+    height: 100%;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transition: 0.25s;
+    -webkit-transition: 0.25s;
+}
+
+figure:hover #btn-send {
+    transform: rotateX(-90deg);
+}
+
+#send span:nth-child(1) {
+    color: var(--texto-normal);
+    transform: translate3d(0, 0, 30px);
+    -webkit-transform: translate3d(0, 0, 30px);
+}
+
+#send span:nth-child(2) {
+    color: var(--texto-btn);
+    background: var(--background-light);
+    transform: rotateX(90deg) translate3d(0, 0, 30px);
+    -webkit-transform: rotateX(90deg) translate3d(0, 0, 30px);
+}
+
+
+form>input {
+    display: flex;
+    flex-direction: column;
+}

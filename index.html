@@ -90,35 +90,26 @@
         <h1>Contact</h1>
 
         <form action="">
-            <input class="caixa" type="text" name="" id="">
-            <input class="caixa" type="tel" id="telefone" placeholder="(00) 00000-0000" maxlength="15"
-                oninput="phonehelper()">
+            <input class="caixa" type="text" name="" id="" placeholder="Name">
+
+            <input class="caixa" type="tel" id="telefone" placeholder="(00) 00000-0000" maxlength="15" oninput="phonehelper()">
+            
             <input class="caixa" type="email" id="endereco" placeholder="example@gmail.com">
+            
             <input class="caixa" type="password" placeholder="Password">
-            <input type="text" placeholder="CEP" class="caixa" id="CEP" oninput="cep()" maxlength="10">
-            <input class="caixa" type="text" id="cpf" placeholder="000.000.000.00" maxlength="14" oninput="cepeefe()">
-            <input type="text" class="caixa" id="cnpj" placeholder="00.000.000/0000-00" maxlength="18" oninput="ceenipejota()">
-            <button class="caixa" class="toggle-genero" type="button" id="butao-genero" data-toggle="dropdown">
-                Enter Your [[GENDER EQUALITY]]
-            </button>
-            <div class="dropdown-genero">
-                <ul>
-                    <li><button class="dropdown-item" type="button">MASCULINE</button></li>
-                    <li><button class="dropdown-item" type="button">FEMININE</button></li>
-                    <li><button class="dropdown-item" type="button">PREFER NOT TO SAY</button></li>
-                </ul>
-            </div>
-            <button id="send" type="submit" onclick="parabens()">Send</button>
+            
+            <input type="text" placeholder="CEP: 00.000-000" class="caixa" id="CEP" oninput="cep()" maxlength="10">
+            
+            <input class="caixa" type="text" id="cpf" placeholder="CPF: 000.000.000.00" maxlength="14" oninput="cepeefe()">
+            
+            <input type="text" class="caixa" id="cnpj" placeholder="CNPJ: 00.000.000/0000-00" maxlength="18" oninput="ceenipejota()">
+            <!--  -->
+            <figure>
+            <div id="btn-send"><button id="send" type="submit" onclick="parabens()"><span>Send</span><span>Are You Sure?</span></button></div>
+            </figure>
+            <!--  -->
         </form>
-
-
-        <div class="genero">
-
-        </div>
     </section>
-    <footer>
-        <p></p>
-    </footer>
 </body>
 
 </html>
