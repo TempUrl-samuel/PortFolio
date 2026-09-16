@@ -7,14 +7,16 @@
     --texto-normal: black;
     --background-light: rgba(26, 117, 159, 1);
     --background-dark: rgba(75, 29, 68, 1);
+    --stand-out: rgba(rgb(56, 172, 160));
+    --stand-out-dark:rgba(rgb(98, 4, 21)) ;
 }
 
 .dark-mode {
     background-color: var(--background-dark);
     color: white;
 
-    section:hover {
-        background-color: rgba(35, 12, 41, 0.5);
+    .hovering-bg:hover {
+        background-color: var(--stand-out-dark);
         transition: background-color 0.5s ease;
     }
 
@@ -50,13 +52,13 @@ body {
     transition: 77ms;
 }
 
-section {
+.hovering-bg {
     border-radius: 50px;
     padding: 2%;
 }
 
-section:hover {
-    background-color: rgba(19, 56, 86, 0.703);
+.hovering-bg:hover {
+    background-color: var(--stand-out);
     transition: background-color 0.5s ease;
 }
 
@@ -177,7 +179,15 @@ h1 {
     width: 22vw;
     height: 3vw;
     background-color: var(--background-light);
+    border: 3px solid var(--texto-btn);
 }
+
+input::placeholder {
+    font-weight: bold;
+    opacity: 1;
+    color: rgb(134, 255, 180);
+}
+
 
 #btn-send {
     width: 100%;
@@ -211,7 +221,8 @@ h1 {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    border: 5px solid var(--background-light);
+    border: 5px solid rgb(0, 255, 98);
+    background-color: rgba(134, 255, 180, 0.521);
     line-height: 50px;
     text-align: center;
     white-space: nowrap;
