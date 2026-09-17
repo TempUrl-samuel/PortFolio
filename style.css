@@ -7,82 +7,207 @@
     --texto-normal: black;
     --background-light: rgba(26, 117, 159, 1);
     --background-dark: rgba(75, 29, 68, 1);
-    --stand-out: rgba(rgb(56, 172, 160));
-    --stand-out-dark:rgba(rgb(98, 4, 21)) ;
+    --stand-out: rgba(120, 138, 163, 1);
+    --stand-out-dark: rgba(218, 182, 150, 1);
 }
 
 .dark-mode {
+    background: linear-gradient(180deg, rgba(128, 60, 115, 1), var(--background-dark));
+    background-attachment: fixed;
+    color: var(--texto-dark);
+}
+
+.dark-mode .hovering-bg {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .hovering-bg:hover {
+    background-color: var(--stand-out-dark);
+    transition: background-color 0.5s ease;
+}
+
+.dark-mode #horizontal-header-wdark-mode ul {
+    background: linear-gradient(135deg,
+            rgba(35, 12, 41, 0.6),
+            rgba(35, 12, 41, 0.25));
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.dark-mode h1 {
+    background: linear-gradient(135deg,
+            rgba(147, 79, 94, 0.45),
+            rgba(147, 79, 94, 0.15));
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.dark-mode #botao-tema {
+    background: radial-gradient(circle at 30% 30%,
+            rgba(147, 79, 94, 0.6),
+            rgba(147, 79, 94, 0.25));
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.dark-mode .caixa {
+    background-color: rgba(35, 12, 41, 0.85);
+    color: var(--texto-dark);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.dark-mode .caixa::placeholder {
+    color: rgba(255, 200, 220, 0.8);
+}
+
+.dark-mode #send {
     background-color: var(--background-dark);
-    color: white;
+    color: var(--texto-dark);
+}
 
-    .hovering-bg:hover {
-        background-color: var(--stand-out-dark);
-        transition: background-color 0.5s ease;
-    }
-
-    #horizontal-header-wdark-mode ul {
-        background-color: rgba(35, 12, 41, 1);
-    }
-
-    h1 {
-        background-color: rgba(147, 79, 94, 1);
-    }
-
-    #botao-tema {
-        background-color: rgba(147, 79, 94, 1);
-    }
-
-    .caixa {
-        background-color: var(--background-dark);
-        color: var(--texto-dark);
-    }
-
-    #send {
-        background-color: var(--background-dark);
-        color: var(--texto-dark);
-    }
-
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: var(--background-light);
-    color: black;
+    background: linear-gradient(180deg, rgba(111, 196, 232, 1), var(--background-light));
+    background-attachment: fixed;
+    color: var(--texto-normal);
     font-size: 25px;
     font-family: "Comic Neue", cursive;
     transition: 77ms;
+    padding-left: 4%;
+    padding-right: 4%;
 }
 
 .hovering-bg {
     border-radius: 50px;
     padding: 2%;
+    margin: 4% 3%;
+    background-color: rgba(0, 0, 0, 0.15);
+    transition: background-color 0.5s ease;
 }
 
 .hovering-bg:hover {
     background-color: var(--stand-out);
-    transition: background-color 0.5s ease;
+}
+
+img {
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.1);
 }
 
 
 h1 {
     text-align: center;
-    background-color: rgba(178, 201, 171, 1);
-    border-radius: 50px 50px 50px 50px;
     width: 33%;
     margin-left: 33%;
+    padding: 10px 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px;
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.35),
+            rgba(255, 255, 255, 0.08));
+    backdrop-filter: blur(12px) saturate(1.5);
+    -webkit-backdrop-filter: blur(12px) saturate(1.5);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.6),
+        inset 0 -1px 2px rgba(255, 255, 255, 0.1),
+        0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+h1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    border-radius: 50px 50px 100% 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0));
+    pointer-events: none;
+}
+
+h1::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -80%;
+    width: 50%;
+    height: 200%;
+    transform: rotate(25deg);
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.35),
+            transparent);
+    animation: glass-sheen 4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes glass-sheen {
+    0% {
+        left: -80%;
+    }
+
+    50% {
+        left: 130%;
+    }
+
+    100% {
+        left: 130%;
+    }
 }
 
 /*Body->header---------*/
-#horizontal-header-wdark-mode ul {
+#horizontal-header ul {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: rgba(118, 200, 147, 1);
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.35),
+            rgba(255, 255, 255, 0.08));
+    backdrop-filter: blur(12px) saturate(1.5);
+    -webkit-backdrop-filter: blur(12px) saturate(1.5);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-left: none;
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.6),
+        inset 0 -1px 2px rgba(255, 255, 255, 0.1),
+        0 8px 32px rgba(0, 0, 0, 0.15);
     border-radius: 0px 50px 50px 0px;
 }
 
-#horizontal-header-wdark-mode li {
+#horizontal-header ul::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    border-radius: 0px 50px 100% 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0));
+    pointer-events: none;
+}
+
+#horizontal-header li {
     list-style: none;
     margin-left: 5%;
+}
+
+#horizontal-header li a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+#horizontal-header li a:hover {
+    text-decoration: line-through;
+    color: var(--texto-dark);
+    transition: 0.15s;
 }
 
 #btn-dark {
@@ -101,7 +226,42 @@ h1 {
     padding: 4vh;
     align-items: center;
     border-radius: 100%;
-    background-color: rgba(35, 12, 40, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(circle at 30% 30%,
+            rgba(255, 255, 255, 0.45),
+            rgba(255, 255, 255, 0.1));
+    backdrop-filter: blur(8px) saturate(1.5);
+    -webkit-backdrop-filter: blur(8px) saturate(1.5);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.6),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.15),
+        0 4px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+#botao-tema:hover {
+    transform: scale(1.15);
+}
+
+#botao-tema.girar {
+    animation: girar 0.6s ease;
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(180deg) scale(1.3);
+    }
+
+    to {
+        transform: rotate(360deg) scale(1);
+    }
 }
 
 /*Body->About Me---------*/
@@ -115,17 +275,21 @@ h1 {
 #AboutMe>div h2 {
     background-color: rgba(188, 138, 95, 1);
     font-size: 100px;
-    width: 70%;
-    border-radius: 0px 150px 0px 0px;
-    padding-right: 1vh;
+    width: 80%;
+    margin-bottom: 0;
+    padding: 1vw;
+    padding-bottom: 2%;
+    border-radius: 75px 75px 0px 0px;
 
 }
 
 #AboutMe>div p {
     width: 80%;
     background-color: rgba(188, 138, 95, 1);
+    margin-top: 0;
     padding: 5%;
-    border-radius: 0px 150px 150px 0px;
+    padding-top: 2%;
+    border-radius: 0px 75px 75px 75px;
 }
 
 
@@ -170,9 +334,15 @@ h1 {
 
 /*Body->Contact----------------------*/
 
-.Contact {
+#Contact form {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+}
+
+#Contact figure {
+    margin: 0;
 }
 
 .caixa {
@@ -221,8 +391,8 @@ input::placeholder {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    border: 5px solid rgb(0, 255, 98);
-    background-color: rgba(134, 255, 180, 0.521);
+    border: 5px solid var(--stand-out);
+    background-color: var(--btn-bg);
     line-height: 50px;
     text-align: center;
     white-space: nowrap;
@@ -255,8 +425,8 @@ figure:hover #btn-send {
 }
 
 #send span:nth-child(2) {
-    color: var(--texto-btn);
-    background: var(--background-light);
+    border: 5px solid var(--stand-out);
+    background-color: var(--btn-bg);
     transform: rotateX(90deg) translate3d(0, 0, 30px);
     -webkit-transform: rotateX(90deg) translate3d(0, 0, 30px);
 }

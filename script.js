@@ -1,6 +1,11 @@
 function tema() {
     let tema = document.body
     tema.classList.toggle("dark-mode")
+
+    let btn = document.getElementById("botao-tema")
+    btn.classList.remove("girar")
+    void btn.offsetWidth // força o navegador a reiniciar a animação
+    btn.classList.add("girar")
 }
 
 function phonehelper() {
@@ -86,7 +91,7 @@ function ceenipejota() {
             document.getElementById("cpf").value = CPF.slice(0, 10) + "-" + CPF[10]
         }
     }
-    
+
     if (CPF[10] != "-") {
         if (CPF[10] != undefined) {
             document.getElementById("cpf").value = CPF.slice(0, 10) + "-" + CPF[10]

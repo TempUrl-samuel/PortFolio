@@ -10,13 +10,13 @@
 
 <body>
     <script src="script.js" defer></script>
-    <header id="horizontal-header-wdark-mode">
+    <header id="horizontal-header">
         <ul>
             <li id="btn-dark">Dark Mode <button onclick="tema()" id="botao-tema"> </button></li>
-            <li>About Me</li>
-            <li>Skills</li>
-            <li>Projects</li>
-            <li>Socials</li>
+            <li><a href="#AboutMe">About Me</a></li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#Socials">Socials</a></li>
         </ul>
     </header>
     <section id="AboutMe" class="hovering-bg">
@@ -43,9 +43,9 @@
     <section id="Projects" class="hovering-bg">
         <h1>My Project(s)</h1>
         <ul>
-            <!-- <li>
+            <li>
                 <div id="Scoundrel-Crawl">Scoundrel Crawl</div>
-            </li> -->
+            </li>
             <li>
                 <div id="Blog">Blog</div>
             </li>
@@ -53,6 +53,7 @@
 
     </section>
     <section id="Experiencias" class="hovering-bg">
+        <h1>My Expreriences</h1>
         <ul>
             <li>
                 <div><img src="IMAGENS/imagem-nao-disponivel-png-1.png"></div>
@@ -90,19 +91,13 @@
         <h1>Contact</h1>
         <form action="">
             <input class="caixa" type="text" name="" id="" placeholder="Name">
-
             <input class="caixa" type="tel" id="telefone" placeholder="(00) 00000-0000" maxlength="15"
                 oninput="phonehelper()">
-
             <input class="caixa" type="email" id="endereco" placeholder="example@gmail.com">
-
             <input class="caixa" type="password" placeholder="Password">
-
             <input type="text" placeholder="CEP: 00.000-000" class="caixa" id="CEP" oninput="cep()" maxlength="10">
-
             <input class="caixa" type="text" id="cpf" placeholder="CPF: 000.000.000.00" maxlength="14"
                 oninput="cepeefe()">
-
             <input type="text" class="caixa" id="cnpj" placeholder="CNPJ: 00.000.000/0000-00" maxlength="18"
                 oninput="ceenipejota()">
             <!--  -->
