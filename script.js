@@ -91,7 +91,7 @@ function ceenipejota() {
             document.getElementById("cpf").value = CPF.slice(0, 10) + "-" + CPF[10]
         }
     }
-
+    
     if (CPF[10] != "-") {
         if (CPF[10] != undefined) {
             document.getElementById("cpf").value = CPF.slice(0, 10) + "-" + CPF[10]
