@@ -1,3 +1,5 @@
+
+
 document.documentElement.classList.add("js")
 
 document.querySelectorAll(".skill-item").forEach(function (item) {
@@ -46,7 +48,7 @@ function tema() {
 
     let btn = document.getElementById("botao-tema")
     btn.classList.remove("girar")
-    void btn.offsetWidth // força o navegador a reiniciar a animação
+    void btn.offsetWidth
     btn.classList.add("girar")
 }
 
@@ -133,7 +135,7 @@ function ceenipejota() {
             document.getElementById("cpf").value = CPF.slice(0, 10) + "-" + CPF[10]
         }
     }
-    
+
     if (CPF[10] != "-") {
         if (CPF[10] != undefined) {
             document.getElementById("cpf").value = CPF.slice(0, 10) + "-" + CPF[10]
@@ -144,3 +146,61 @@ function ceenipejota() {
 function parabens() {
     alert("Parabens, tudo foi preencido perfeitamente")
 }
+
+/*GSAP SCROLLTRIGGER*/
+gsap.registerPlugin(ScrollTrigger);
+
+(() => {
+    gsap.utils.toArray(".scripting-text").forEach((element) => {
+      const texto = document.getElementsByClassName("scripting-text");
+      const orgText = element.textContent;
+      const replacedText = orgText.replace(/[^]/g, "*");
+      element.textContent = replacedText;
+    gsap.to(texto,{
+      text: orgText,
+      scrollTrigger :{
+        trigger: "#Socials",
+        start: "center center",
+        end: "bottom top",
+        scrub:0.8,
+
+      }
+    })
+      // ScrollTrigger.create({
+      //   trigger: element,
+      //   start: "center center+=100",
+      //   end: "center center-=100",
+      //   onUpdate: (self) => {
+      //     const pos = parseInt(orgTextLen * self.progress);
+      //     const str = orgText.substring(pos, 0) + replacedText.substring(pos);
+      //     element.textContent = str;
+      //   },
+      //   markers: true
+      // });
+         
+  });
+});
+
+// gsap.registerPlugin(ScrollTrigger);
+
+// (() => {
+//   gsap.utils.toArray(".scripting-text").forEach((element) => {
+//     const orgText = element.textContent;
+//     const orgTextLen = orgText.length;
+//     const replacedText = orgText.replace(/[^ ]/g, "*");
+    
+//     element.textContent = replacedText;
+
+//     ScrollTrigger.create({
+//       trigger: element,
+//       start: "center center+=100",
+//       end: "center center-=100",
+//       onUpdate: (self) => {
+//         const pos = parseInt(orgTextLen * self.progress);
+//         const str = orgText.substring(pos, 0) + replacedText.substring(pos);
+//         element.textContent = str;
+//       },
+//       markers: true // Altere para false em produção
+//     });
+//   });
+// })();

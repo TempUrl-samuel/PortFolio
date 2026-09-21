@@ -175,11 +175,11 @@ h1::after {
             rgba(255, 255, 255, 0) 70%);
     mix-blend-mode: overlay;
     opacity: 0;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.66s ease;
 }
 
 #cursor-glow.visivel {
-    opacity: 1;
+    opacity: 0.67;
 }
 
 .dark-mode #cursor-glow {
@@ -189,7 +189,8 @@ h1::after {
             rgba(218, 182, 150, 0) 70%);
 }
 
-@media (hover: none), (pointer: coarse) {
+@media (hover: none),
+(pointer: coarse) {
     #cursor-glow {
         display: none;
     }
@@ -253,7 +254,7 @@ h1::after {
     transition: 0.15s;
 }
 
-#horizontal-header img{
+#horizontal-header img {
     width: auto;
     height: 5vw;
     margin-bottom: -0.5vw;
@@ -552,14 +553,15 @@ form>input {
     display: flex;
     flex-direction: column;
 }
+
 /*Body->Socials------------------*/
-.social-img{
+.social-img {
     width: auto;
     height: 20vh;
     transition: transform 0.3s ease;
 }
 
-.social-img:hover{
+.social-img:hover {
     transform: scale(1.25);
 }
 

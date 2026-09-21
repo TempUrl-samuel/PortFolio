@@ -6,11 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>INCOG - portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cloudflare.com" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js" defer></script>
+    <script src="script.js" defer></script>
+
 </head>
 
 <body>
+    
     <div id="cursor-glow" aria-hidden="true"></div>
-    <script src="script.js" defer></script>
+    
+    
     <header id="horizontal-header">
         <ul>
             <li id="btn-dark">Dark Mode <button onclick="tema()" id="botao-tema"> </button></li>
@@ -25,8 +31,9 @@
     </header>
     <section id="AboutMe" class="hovering-bg">
         <div id="text-about">
-            <h2>Samuel <br><span id="caetano">Caetano</span></h2>
-            <p>Hello, I’m Samuel, a 16 year old teenager who has been studying in Cotemig as of 2026, and my main focus
+            <h2 class="scripting-text">Samuel <br><span id="caetano">Caetano</span></h2>
+            <p class="scripting-text">Hello, I’m Samuel, a 16 year old teenager who has been studying in Cotemig as of
+                2026, and my main focus
                 is
                 to help with any type of front end problems, where as html, css or javascript, I’ll always be in charge.
                 I’ve been learning how to code in C#, MySQL, JavaScript & how to edit images and videos in adobe
@@ -37,22 +44,25 @@
         <div id="foto-de-perfil"><img src="IMAGENS/imagem-nao-disponivel-png-1.png" alt=""></div>
     </section>
     <section id="Skills" class="hovering-bg">
-        <h1>Minha Skills</h1>
+        <h1 class="scripting-text">Minha Skills</h1>
         <div id="skill-list">
             <div class="skill-item" tabindex="0" role="button" aria-expanded="false">
                 <img src="IMAGENS/imagem-nao-disponivel-png-1.png" alt="Programming Skills">
-                <p class="skill-caption">Programming Skills</p>
-                <p class="skill-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                <p class="skill-caption" class="scripting-text">Programming Skills</p>
+                <p class="skill-desc" class="scripting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt.</p>
             </div>
             <div class="skill-item" tabindex="0" role="button" aria-expanded="false">
                 <img src="IMAGENS/imagem-nao-disponivel-png-1.png" alt="Adobe Editing Skills">
-                <p class="skill-caption">Adobe Editing Skills</p>
-                <p class="skill-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                <p class="skill-caption" class="scripting-text">Adobe Editing Skills</p>
+                <p class="skill-desc" class="scripting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt.</p>
             </div>
             <div class="skill-item" tabindex="0" role="button" aria-expanded="false">
                 <img src="IMAGENS/imagem-nao-disponivel-png-1.png" alt="Advanced English">
-                <p class="skill-caption">Advanced English</p>
-                <p class="skill-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                <p class="skill-caption" class="scripting-text">Advanced English</p>
+                <p class="skill-desc" class="scripting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt.</p>
             </div>
         </div>
     </section>
@@ -69,42 +79,48 @@
 
     </section>
     <section id="Experiencias" class="hovering-bg">
-        <h1>My Expreriences</h1>
+        <h1 class="scripting-text">My Expreriences</h1>
         <ul>
             <li>
                 <div><img src="IMAGENS/imagem-nao-disponivel-png-1.png"></div>
-                <p>I travelled to Portugal to understand more of my dad’s job, the customer management part of the
+                <p class="scripting-text">I travelled to Portugal to understand more of my dad’s job, the customer
+                    management part of the
                     company.</p>
             </li>
             <li>
                 <div><img src="IMAGENS/imagem-nao-disponivel-png-1.png"></div>
-                <p>I have been to Minas Summit, a place where companies reunite into one place to show their
+                <p class="scripting-text">I have been to Minas Summit, a place where companies reunite into one place to
+                    show their
                     innovations, startups and businesses.</p>
             </li>
             <li>
                 <div><img src="IMAGENS/imagem-nao-disponivel-png-1.png"></div>
-                <p>I went to Glass South America in Sao Paulo, with the intent of understanding better the business
+                <p class="scripting-text">I went to Glass South America in Sao Paulo, with the intent of understanding
+                    better the business
                     marketing and architecture design. </p>
             </li>
         </ul>
     </section>
     <section id="Socials" class="hovering-bg">
-        <h1>My Socials</h1>
+        <h1 class="scripting-text">My Socials</h1>
         <div id="Youtube/Instagram">
             <ul>
-                <li data-tooltip="Youtube"><img class="social-img" src="IMAGENS/youtube-logo-2431.svg" alt="Youtube"></li>
-                <li data-tooltip="Instagram"><img class="social-img" src="IMAGENS/instagram-logo-8869.svg" alt="Instagram"></li>
+                <li data-tooltip="Youtube"><img class="social-img" src="IMAGENS/youtube-logo-2431.svg" alt="Youtube">
+                </li>
+                <li data-tooltip="Instagram"><img class="social-img" src="IMAGENS/instagram-logo-8869.svg"
+                        alt="Instagram"></li>
             </ul>
         </div>
         <div id="Reddit/Neocities">
             <ul>
                 <li data-tooltip="Reddit"><img class="social-img" src="IMAGENS/reddit-logo-2436.svg" alt="Reddit"></li>
-                <li data-tooltip="Neocities"><img class="social-img" src="IMAGENS/Neocities_Logo.svg" alt="Neocities"></li>
+                <li data-tooltip="Neocities"><img class="social-img" src="IMAGENS/Neocities_Logo.svg" alt="Neocities">
+                </li>
             </ul>
         </div>
     </section>
     <section id="Contact" class="hovering-bg">
-        <h1>Contact</h1>
+        <h1 class="scripting-text">Contact</h1>
         <form action="">
             <input class="caixa" type="text" name="" id="" placeholder="Name">
             <input class="caixa" type="tel" id="telefone" placeholder="(00) 00000-0000" maxlength="15"
@@ -129,8 +145,9 @@
         </form>
     </section>
     <footer>
-        <p>Todos Os Direitos Reservados © INCOG</p>
+        <p class="scripting-text">Todos Os Direitos Reservados © INCOG</p>
     </footer>
+    
 </body>
 
 </html>
