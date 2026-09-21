@@ -1,3 +1,20 @@
+document.documentElement.classList.add("js")
+
+document.querySelectorAll(".skill-item").forEach(function (item) {
+    function alternar() {
+        let aberto = item.classList.toggle("aberto")
+        item.setAttribute("aria-expanded", aberto)
+    }
+
+    item.addEventListener("click", alternar)
+    item.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault()
+            alternar()
+        }
+    })
+})
+
 const glow = document.getElementById("cursor-glow")
 let glowX = innerWidth / 2
 let glowY = innerHeight / 2
