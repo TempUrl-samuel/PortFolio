@@ -3,12 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>INCOG - portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div id="cursor-glow" aria-hidden="true"></div>
     <script src="script.js" defer></script>
     <header id="horizontal-header">
         <ul>
@@ -17,6 +18,7 @@
             <li><a href="#Skills">Skills</a></li>
             <li><a href="#Projects">Projects</a></li>
             <li><a href="#Socials">Socials</a></li>
+            <li><img src="IMAGENS/INCOG-2.png" alt="PFP"></li>
         </ul>
     </header>
     <section id="AboutMe" class="hovering-bg">
@@ -76,14 +78,14 @@
         <h1>My Socials</h1>
         <div id="Youtube/Instagram">
             <ul>
-                <li><img src="IMAGENS/imagem-nao-disponivel-png-1.png" alt="Youtube"></li>
-                <li><img src="IMAGENS/imagem-nao-disponivel-png-1.png" alt="Instagram"></li>
+                <li data-tooltip="Youtube"><img class="social-img" src="IMAGENS/youtube-logo-2431.svg" alt="Youtube"></li>
+                <li data-tooltip="Instagram"><img class="social-img" src="IMAGENS/instagram-logo-8869.svg" alt="Instagram"></li>
             </ul>
         </div>
         <div id="Reddit/Neocities">
             <ul>
-                <li><img src="IMAGENS/imagem-nao-disponivel-png-1.png" alt="Reddit"></li>
-                <li><img src="IMAGENS/imagem-nao-disponivel-png-1.png" alt="Neocities"></li>
+                <li data-tooltip="Reddit"><img class="social-img" src="IMAGENS/reddit-logo-2436.svg" alt="Reddit"></li>
+                <li data-tooltip="Neocities"><img class="social-img" src="IMAGENS/Neocities_Logo.svg" alt="Neocities"></li>
             </ul>
         </div>
     </section>

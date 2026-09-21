@@ -1,3 +1,28 @@
+const glow = document.getElementById("cursor-glow")
+let glowX = innerWidth / 2
+let glowY = innerHeight / 2
+let alvoX = glowX
+let alvoY = glowY
+
+document.addEventListener("mousemove", function (e) {
+    alvoX = e.clientX
+    alvoY = e.clientY
+    glow.classList.add("visivel")
+})
+
+document.addEventListener("mouseleave", function () {
+    glow.classList.remove("visivel")
+})
+
+function animarGlow() {
+    glowX += (alvoX - glowX) * 0.15
+    glowY += (alvoY - glowY) * 0.15
+    glow.style.transform =
+        "translate(" + (glowX - 50) + "px, " + (glowY - 50) + "px)"
+    requestAnimationFrame(animarGlow)
+}
+animarGlow()
+
 function tema() {
     let tema = document.body
     tema.classList.toggle("dark-mode")
