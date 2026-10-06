@@ -423,6 +423,57 @@ h1::after {
     justify-content: center;
 }
 
+/*
+=====================================================
+=                     projects - onclick imagens    =
+=====================================================
+/* O container agrupa a imagem principal e as laterais */
+.galeria {
+    display: flex;
+    /* coloca os itens lado a lado */
+    align-items: center;
+    /* alinha verticalmente no centro */
+    gap: 12px;
+    /* espaço entre as imagens */
+    justify-content: center;
+    padding: 40px;
+}
+
+/* A imagem principal, sempre visível e clicável */
+.principal {
+    width: 200px;
+    border-radius: 12px;
+    cursor: pointer;
+    /* mãozinha ao passar por cima */
+    transition: transform 0.2s;
+    /* deixa o "aumentar" suave */
+}
+
+.principal:active {
+    transform: scale(0.97);
+    /* leve encolhida ao clicar (feedback) */
+}
+
+/* As imagens laterais: começam ESCONDIDAS */
+.lateral {
+    width: 0;
+    /* largura zero = invisível */
+    opacity: 0;
+    /* transparente */
+    border-radius: 12px;
+    /* a transição anima a abertura suavemente */
+    transition: width 0.4s ease, opacity 0.4s ease;
+}
+
+/* Quando o container ganha a classe "aberto",
+       as laterais aparecem */
+.galeria.aberto .lateral {
+    width: 150px;
+    /* ganham largura */
+    opacity: 1;
+    /* ficam visíveis */
+}
+
 /*Body->My Experiences----------------------*/
 
 #Experiencias>ul li {

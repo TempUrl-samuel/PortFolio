@@ -152,55 +152,30 @@ gsap.registerPlugin(ScrollTrigger);
 
 (() => {
     gsap.utils.toArray(".scripting-text").forEach((element) => {
-      const texto = document.getElementsByClassName("scripting-text");
-      const orgText = element.textContent;
-      const replacedText = orgText.replace(/[^]/g, "*");
-      element.textContent = replacedText;
-    gsap.to(texto,{
-      text: orgText,
-      scrollTrigger :{
-        trigger: "#Socials",
-        start: "center center",
-        end: "bottom top",
-        scrub:0.8,
+        const texto = document.getElementsByClassName("scripting-text");
+        const orgText = element.textContent;
+        const replacedText = orgText.replace(/[^]/g, "*");
+        element.textContent = replacedText;
+        gsap.to(texto, {
+            text: orgText,
+            scrollTrigger: {
+                trigger: "#Socials",
+                start: "center center",
+                end: "bottom top",
+                scrub: 0.8,
 
-      }
-    })
-      // ScrollTrigger.create({
-      //   trigger: element,
-      //   start: "center center+=100",
-      //   end: "center center-=100",
-      //   onUpdate: (self) => {
-      //     const pos = parseInt(orgTextLen * self.progress);
-      //     const str = orgText.substring(pos, 0) + replacedText.substring(pos);
-      //     element.textContent = str;
-      //   },
-      //   markers: true
-      // });
-         
-  });
+            }
+        })
+    });
 });
+//
+// projects onclick images
+//
 
-// gsap.registerPlugin(ScrollTrigger);
+const principais = document.getElementsByClassName("middle-clickable");
 
-// (() => {
-//   gsap.utils.toArray(".scripting-text").forEach((element) => {
-//     const orgText = element.textContent;
-//     const orgTextLen = orgText.length;
-//     const replacedText = orgText.replace(/[^ ]/g, "*");
-    
-//     element.textContent = replacedText;
-
-//     ScrollTrigger.create({
-//       trigger: element,
-//       start: "center center+=100",
-//       end: "center center-=100",
-//       onUpdate: (self) => {
-//         const pos = parseInt(orgTextLen * self.progress);
-//         const str = orgText.substring(pos, 0) + replacedText.substring(pos);
-//         element.textContent = str;
-//       },
-//       markers: true // Altere para false em produção
-//     });
-//   });
-// })();
+for (let i = 0; i < principais.length; i++) {
+    principais[i].addEventListener("click", function () {
+        this.closest(".galeria").classList.toggle("aberto");
+    });
+}

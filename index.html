@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>INCOG - portfolio</title>
     <link rel="stylesheet" href="style.css">
-    
+
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js" defer></script>
     <script src="script.js" defer></script>
@@ -14,10 +14,10 @@
 </head>
 
 <body>
-    
+
     <div id="cursor-glow" aria-hidden="true"></div>
-    
-    
+
+
     <header id="horizontal-header">
         <ul>
             <li id="btn-dark">Dark Mode <button onclick="tema()" id="botao-tema"> </button></li>
@@ -71,13 +71,28 @@
         <h1>My Project(s)</h1>
         <ul>
             <li>
-                <div id="Scoundrel-Crawl">Scoundrel Crawl</div>
+                <div class="galeria" id="Scoundrel-Crawl">
+                    <img class="lateral" src="IMAGENS/imagem-nao-disponivel-png-1.png" alt="">
+                    <img class="principal middle-clickable" src="IMAGENS/imagem-nao-disponivel-png-1.png" alt="">
+                    <img class="lateral" src="IMAGENS/imagem-nao-disponivel-png-1.png" alt="">
+                </div>
             </li>
             <li>
-                <div id="Blog">Blog</div>
+                <div class="galeria" id="Blog">
+                    <img class="lateral" src="IMAGENS/imagem-nao-disponivel-png-1.png" alt="">
+                    <img class="principal middle-clickable" src="IMAGENS/imagem-nao-disponivel-png-1.png" alt="">
+                    <img class="lateral" src="IMAGENS/imagem-nao-disponivel-png-1.png" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="galeria" id="galeria-3">
+                    <img class="lateral" src="IMAGENS/imagem-nao-disponivel-png-1.png" alt="Imagem esquerda">
+                    <img class="principal middle-clickable" src="IMAGENS/imagem-nao-disponivel-png-1.png"
+                        alt="Imagem principal">
+                    <img class="lateral" src="IMAGENS/imagem-nao-disponivel-png-1.png" alt="Imagem direita">
+                </div>
             </li>
         </ul>
-
     </section>
     <section id="Experiencias" class="hovering-bg">
         <h1 class="scripting-text">My Expreriences</h1>
@@ -114,7 +129,8 @@
         </div>
         <div id="Reddit/Neocities">
             <ul>
-                <li data-tooltip="Reddit"><img class="social-img" src="IMAGENS/reddit-logo-2436.svg" alt="Reddit"></li>
+                <li data-tooltip="Linkedin"><img class="social-img" src="IMAGENS/linkedin-svgrepo-com.svg"
+                        alt="LinkedIn"></li>
                 <li data-tooltip="Neocities"><img class="social-img" src="IMAGENS/Neocities_Logo.svg" alt="Neocities">
                 </li>
             </ul>
@@ -148,7 +164,7 @@
     <footer>
         <p class="scripting-text">Todos Os Direitos Reservados © INCOG</p>
     </footer>
-    
+
 </body>
 
 </html>
