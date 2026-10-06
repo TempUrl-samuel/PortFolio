@@ -254,6 +254,18 @@ h1::after {
     transition: 0.15s;
 }
 
+#btn-curriculo {
+    background-color: var(--btn-bg);
+    border-style: none;
+    padding: 1vh 2vh;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+#btn-curriculo a {
+    color: var(--texto-btn);
+}
+
 #horizontal-header img {
     width: auto;
     height: 5vw;
@@ -342,6 +354,12 @@ h1::after {
     padding-top: 2%;
 }
 
+#foto-de-perfil img {
+    clip-path: inset(0 0 25% 0 round 0 20px 20px 0);
+    -webkit-mask-image: linear-gradient(to left, black 80%, transparent 100%);
+    mask-image: linear-gradient(to left, black 80%, transparent 100%);
+}
+
 
 /*Body->Minhas Skills--------------------*/
 
@@ -363,9 +381,9 @@ h1::after {
     transition:
         transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
         filter 0.6s ease;
+        width: 25vh;
 }
 
-/* hover: mesma imagem, mas com destaque */
 .skill-item:hover img,
 .skill-item:focus-visible img {
     transform: scale(1.12);
@@ -385,7 +403,6 @@ h1::after {
     font-size: 70%;
 }
 
-/* descrição recolhida só quando o JS está ativo (se o script falhar, ela aparece normal) */
 .js .skill-desc {
     max-height: 0;
     opacity: 0;
@@ -397,7 +414,6 @@ h1::after {
         transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* clique: o texto expande e sobe de leve */
 .js .skill-item.aberto .skill-desc {
     max-height: 300px;
     opacity: 1;
@@ -420,58 +436,51 @@ h1::after {
 
 #Projects>ul li {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Projects h3 {
+    margin: 0 0 20px;
+    font-weight: bold;
+    text-align: center;
 }
 
 /*
 =====================================================
 =                     projects - onclick imagens    =
 =====================================================
-/* O container agrupa a imagem principal e as laterais */
+*/
 .galeria {
     display: flex;
-    /* coloca os itens lado a lado */
     align-items: center;
-    /* alinha verticalmente no centro */
     gap: 12px;
-    /* espaço entre as imagens */
     justify-content: center;
     padding: 40px;
 }
 
-/* A imagem principal, sempre visível e clicável */
 .principal {
     width: 200px;
     border-radius: 12px;
     cursor: pointer;
-    /* mãozinha ao passar por cima */
     transition: transform 0.2s;
-    /* deixa o "aumentar" suave */
 }
 
 .principal:active {
     transform: scale(0.97);
-    /* leve encolhida ao clicar (feedback) */
 }
 
-/* As imagens laterais: começam ESCONDIDAS */
+
 .lateral {
     width: 0;
-    /* largura zero = invisível */
     opacity: 0;
-    /* transparente */
     border-radius: 12px;
-    /* a transição anima a abertura suavemente */
     transition: width 0.4s ease, opacity 0.4s ease;
 }
 
-/* Quando o container ganha a classe "aberto",
-       as laterais aparecem */
 .galeria.aberto .lateral {
     width: 150px;
-    /* ganham largura */
     opacity: 1;
-    /* ficam visíveis */
 }
 
 /*Body->My Experiences----------------------*/
@@ -483,6 +492,11 @@ h1::after {
     width: 85%;
     align-items: center;
     margin: 5% 0% 0% 5%;
+}
+
+#Experiencias>ul li img{
+    width: 30vh;
+    height: 25vh;
 }
 
 /*Body->My Socials----------------------*/
@@ -516,6 +530,7 @@ h1::after {
 .caixa {
     width: 75%;
     height: 3vw;
+    border-radius: 50px;
     background-color: var(--background-light);
     border: 3px solid var(--texto-btn);
 }
