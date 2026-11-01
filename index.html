@@ -1,186 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>INCOG - portfolio</title>
-    <link rel="stylesheet" href="style.css">
-
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalzona</title>
+    <link rel="stylesheet" href="CSSs/style.css">
+    <link rel="stylesheet" href="CSSs/inicio.css">
+    <link rel="stylesheet" href="CSSs/paginas.css">
     <script src="script.js" defer></script>
-
 </head>
 
-<body>
-
-    <div id="cursor-glow" aria-hidden="true"></div>
-
-
-    <header id="horizontal-header">
-        <ul>
-            <li id="btn-dark">Dark Mode <button onclick="tema()" id="botao-tema"> </button></li>
-            <br>
-            <li><a href="#AboutMe">About Me</a></li>
-            <li><a href="#Skills">Skills</a></li>
-            <li><a href="#Projects">Projects</a></li>
-            <li><a href="#Socials">Socials</a></li>
-            <br>
-            <li><img src="IMAGENS/INCOG-2.png" alt="PFP"></li>
-            <li id="btn-curriculo"><a
-                    href="https://docs.google.com/document/d/10kTrDkZA4GteMOM0nlhTnePgPqIBq2K4eNmIRP66N9E/edit?usp=sharing"
-                    target="_blank" rel="noopener noreferrer">Currículo</a></li>
+<body class="pagina-inicial">
+    <header id="head-info">
+        <a id="header-logo" href="index.html">
+            <h1>Kalzona</h1>
+        </a>
+        <ul id="lista-header">
+            <li id="btn-dark">Dark Mode <button onclick="tema()" id="botao-tema" type="button"
+                    aria-label="Alternar modo claro e escuro"> </button></li>
+            <li><a href="2sobre-nos.html">Sobre Nós</a></li>
+            <li><a href="index.html#sabores-e-alternativas">Cardápio</a></li>
+            <li><a href="3localizacoes.html">Localizações</a></li>
+            <li><a href="4login.html">Log In</a></li>
+            <li><a href="5contato.html">Contato</a></li>
+            <li><a href="7carrinho.html">Carrinho</a></li>
         </ul>
     </header>
-    <section id="AboutMe" class="hovering-bg">
-        <div id="text-about">
-            <h2 class="scripting-text">Samuel <br><span id="caetano">Caetano</span></h2>
-            <p class="scripting-text">Hello, I’m Samuel, a 16 year old teenager who has been studying in Cotemig as of
-                2026, and my main focus
-                is
-                to help with any type of front end problems, where as html, css or javascript, I’ll always be in charge.
-                I’ve been learning how to code in C#, MySQL, JavaScript & how to edit images and videos in adobe
-                premiere
-                and photoshop. At the moment I am also doing courses of JS and HTML.
-            </p>
-        </div>
-        <div id="foto-de-perfil"><img src="IMAGENS/foto-para-portfolio.jpeg" alt=""></div>
-    </section>
-    <section id="Skills" class="hovering-bg">
-        <h1 class="scripting-text">Minha Skills</h1>
-        <div id="skill-list">
-            <div class="skill-item" tabindex="0" role="button" aria-expanded="false">
-                <img src="IMAGENS/Visual_Studio_Code_1.35_icon.svg.png" alt="Programming Skills">
-                <p class="skill-caption" class="scripting-text">Programming Skills</p>
-                <p class="skill-desc" class="scripting-text">I not only have learned the basics of visual studio code, but I've also learned visual studio code, C# and MySQL, and I plan to learn even further.</p>
+    <main>
+        <section id="hook">
+            <div id="hook-torto">
+                <h1>
+                    SABORES INIMAGINÁVEIS
+                    <br>
+                    PARA TODO TIPO DE APETITE!
+                </h1>
             </div>
-            <div class="skill-item" tabindex="0" role="button" aria-expanded="false">
-                <img src="IMAGENS/Adobe_Premiere_Pro_CC_icon.svg" alt="Adobe Editing Skills">
-                <p class="skill-caption" class="scripting-text">Adobe Editing Skills</p>
-                <p class="skill-desc" class="scripting-text">Have been studying and experimenting with Adobe Premiere since January 2026 and I've learned the basics at least, planned to be advanced aswell.</p>
+            <div>
+                <img src="IMAGENS/Imagem_não_disponível.svg" alt="Espaço reservado para a imagem da Kalzona">
             </div>
-            <div class="skill-item" tabindex="0" role="button" aria-expanded="false">
-                <img src="IMAGENS/Cultura_Inglesa_logo.svg.png" alt="Advanced English">
-                <p class="skill-caption" class="scripting-text">Advanced English</p>
-                <p class="skill-desc" class="scripting-text">I have been learning English since 5 and I have turned into a almost fluent speaker, with advanced writing, interpretation, repertoire and speaking.</p>
-            </div>
+        </section>
+        <div class="abertura"><span class="etiqueta">KALZONA • SOBRE NÓS</span>
+            <h1>Prazer, somos a Kalzona.</h1>
+            <p>Calzones para todo tipo de apetite.</p>
         </div>
-    </section>
-    <section id="Projects" class="hovering-bg">
-        <h1>My Project(s)</h1>
-        <ul>
-            <li>
-                <div class="galeria" id="Scoundrel-Crawl">
-                    <img class="lateral" src="IMAGENS/imagem-nao-disponivel-png-1.png" alt="">
-                    <img class="principal middle-clickable" src="IMAGENS/imagem-nao-disponivel-png-1.png" alt="">
-                    <img class="lateral" src="IMAGENS/imagem-nao-disponivel-png-1.png" alt="">
-                </div>
-                <h3>Scoundrel Crawl [WIP]</h3>
-            </li>
-            <li>
-                <div class="galeria" id="Blog">
-                    <img class="lateral" src="IMAGENS/imagem-nao-disponivel-png-1.png" alt="">
-                    <img class="principal middle-clickable" src="IMAGENS/blog.png" alt="">
-                    <img class="lateral" src="IMAGENS/imagem-nao-disponivel-png-1.png" alt="">
-                </div>
-                <h3>My Blog [Forever WIP]</h3>
-            </li>
-            <li>
-                <div class="galeria" id="galeria-3">
-                    <img class="lateral" src="IMAGENS/imagem-nao-disponivel-png-1.png" alt="Imagem esquerda">
-                    <img class="principal middle-clickable" src="IMAGENS/mapa .png"
-                        alt="Imagem principal">
-                    <img class="lateral" src="IMAGENS/imagem-nao-disponivel-png-1.png" alt="Imagem direita">
-                </div>
-                <h3>Site de RPG [WIP]</h3>
-            </li>
-        </ul>
-    </section>
-    <section id="Experiencias" class="hovering-bg">
-        <h1 class="scripting-text">My Expreriences</h1>
-        <ul>
-            <li>
-                <div><img src="IMAGENS/portugal-algumlugarai-esquecija.jpeg"></div>
-                <p class="scripting-text">I travelled to Portugal to understand more of my dad’s job, the customer
-                    management part of the
-                    company.</p>
-            </li>
-            <li>
-                <div><img src="IMAGENS/minas-summit-stadn-especifico.jpeg"></div>
-                <p class="scripting-text">I have been to Minas Summit, a place where companies reunite into one place to
-                    show their
-                    innovations, startups and businesses.</p>
-            </li>
-            <li>
-                <div><img src="IMAGENS/imagem-nao-disponivel-png-1.png"></div>
-                <p class="scripting-text">I went to Glass South America in Sao Paulo, with the intent of understanding
-                    better the business
-                    marketing and architecture design. </p>
-            </li>
-        </ul>
-    </section>
-    <section id="Socials" class="hovering-bg">
-        <h1 class="scripting-text">My Socials</h1>
-        <div id="Youtube/Instagram">
-            <ul>
-                <li data-tooltip="Youtube">
-                    <a href="https://www.youtube.com/@incognita_answer">
-                        <img class="social-img" src="IMAGENS/youtube-logo-2431.svg" alt="Youtube">
-                    </a>
-                </li>
-                <li data-tooltip="Instagram">
-                    <a href="https://www.instagram.com/samuelcaetanosfx?stkn=NDY2anl4cHZjczB0">
-                        <img class="social-img" src="IMAGENS/instagram-logo-8869.svg" alt="Instagram">
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div id="Reddit/Neocities">
-            <ul>
-                <li data-tooltip="Linkedin">
-                    <a
-                        href="https://www.linkedin.com/in/samuel-caetano-738a53417?utm_source=share_via&utm_content=profile&utm_medium=member_android">
-                        <img class="social-img" src="IMAGENS/linkedin-svgrepo-com.svg" alt="LinkedIn">
-                    </a>
-                </li>
-                <li data-tooltip="Neocities">
-                    <a href="https://temp-url.neocities.org/">
-                        <img class="social-img" src="IMAGENS/Neocities_Logo.svg" alt="Neocities">
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section id="Contact" class="hovering-bg">
-        <h1 class="scripting-text">Contact</h1>
-        <form action="">
-            <input class="caixa" type="text" name="" id="" placeholder="Name">
-            <input class="caixa" type="tel" id="telefone" placeholder="(00) 00000-0000" maxlength="15"
-                oninput="phonehelper()">
-            <input class="caixa" type="email" id="endereco" placeholder="example@gmail.com">
-            <input class="caixa" type="password" placeholder="Password">
-            <input type="text" placeholder="CEP: 00.000-000" class="caixa" id="CEP" oninput="cep()" maxlength="10">
-            <input class="caixa" type="text" id="cpf" placeholder="CPF: 000.000.000.00" maxlength="14"
-                oninput="cepeefe()">
-            <input type="text" class="caixa" id="cnpj" placeholder="CNPJ: 00.000.000/0000-00" maxlength="18"
-                oninput="ceenipejota()">
-            <!--  -->
-            <figure>
-                <div id="btn-send">
-                    <button id="send" type="submit" onclick="parabens()">
-                        <span>Send</span>
-                        <span>Are You Sure?</span>
-                    </button>
-                </div>
-            </figure>
-            <!--  -->
-        </form>
-    </section>
-    <footer>
-        <p class="scripting-text">Todos Os Direitos Reservados © INCOG</p>
-    </footer>
 
+        <section class="painel">
+            <h2>Nosso foco é o calzone.</h2>
+            <p>A Kalzona é um projeto de delivery com sabores salgados, vegetarianos e doces. Nossa proposta é reunir
+                essas opções em um cardápio fácil de escolher e pedir.</p>
+            <p>Além dos calzones, o cardápio tem espaço para esfihas, breadsticks e outras alternativas da casa.</p><a
+                class="botao" href="#sabores-e-alternativas">Conhecer o cardápio</a>
+        </section>
+        <section id="sabores-e-alternativas">
+            <h1>Apenas uma fração dos sabores que possuímos:</h1>
+            <div id="inicio-sabores">
+                <img src="IMAGENS/Imagem_não_disponível.svg" alt="">
+
+            </div>
+            <div class="sabores-calzone">
+                <img src="IMAGENS/Imagem_não_disponível.svg" alt="">
+                <h3>calabresa</h3>
+                <h3>frango com catupiry</h3>
+                <img src="IMAGENS/Imagem_não_disponível.svg" alt="">
+                <img src="IMAGENS/Imagem_não_disponível.svg" alt="">
+                <h3>vegetariana</h3>
+            </div>
+            <h1>MAS SE NÃO QUISER, TAMBÉM TEMOS OUTRAS OPÇÕES</h1>
+            <div class="sabores-calzone">
+                <img src="IMAGENS/Imagem_não_disponível.svg" alt="">
+                <h3>opcao vegetariana</h3>
+                <h3>esfihas</h3>
+                <img src="IMAGENS/Imagem_não_disponível.svg" alt="">
+                <img src="IMAGENS/Imagem_não_disponível.svg" alt="">
+                <h3>breadsticks</h3>
+                <h3>stromboli</h3>
+                <img src="IMAGENS/Imagem_não_disponível.svg" alt="">
+            </div>
+            <div class="sabores-calzone">
+                <h1>VAI UM DOCE AÍ?</h1>
+                <br>
+                <img src="IMAGENS/Imagem_não_disponível.svg" alt="">
+                <h3>calzone de nutella com morango</h3>
+                <h3>calzone de doce de leite e banana</h3>
+                <img src="IMAGENS/Imagem_não_disponível.svg" alt="">
+                <img src="IMAGENS/Imagem_não_disponível.svg" alt="">
+                <h3>molho de chocolate para breadsticks</h3>
+                <h3>esfihas doces</h3>
+                <img src="IMAGENS/Imagem_não_disponível.svg" alt="">
+            </div>
+        </section>
+    </main>
+    <footer class="acessos-paginas">
+        <a href="index.html">Início</a> |
+        <a href="6cadastro.html">Cadastro</a> |
+        <a href="perfil.html">Perfil</a> |
+        <a href="pedidos.html">Pedidos</a> |
+        <a href="7carrinho.html">Carrinho</a> |
+        <a href="8pagamento.html">Pagamento</a>
+    </footer>
 </body>
 
 </html>
